@@ -1,14 +1,27 @@
 # 🚀 GitLingo - GitHub 开发者英语学习平台
 
-**GitLingo** 是一款专门为开发者设计的、模仿多邻国（Duolingo）交互流程的英语学习 Web 应用。它将你日常在 GitHub 和开发场景中可能遇到的词汇与表述，设计成了**16个渐进式单元（Units）**，涵盖了从最基础的“登录/注册”到复杂的“代码合并”、“版本回滚”和“AI 辅助开发（Copilot）”。
+<p align="center">
+  <strong>专为开发者设计的多邻国式（Duolingo）交互流程 GitHub / Git 词汇通关练习平台</strong>
+</p>
 
-整个课程包含 **385 个核心词汇**、**48 个交互式练习** 以及 **16 个还原真实开发场景的情景对话故事（Stories）**。
+<p align="center">
+  <a href="https://gitlingo.srint.cn" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-在线预览-58cc02?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Live Demo" />
+  </a>
+  <img src="https://img.shields.io/badge/Vite-8.0-1cb0f6?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/React-19.0-20232a?style=for-the-badge&logo=react&logoColor=61dafb" alt="React" />
+  <img src="https://img.shields.io/badge/Tailwind--v4-38bdf8?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+</p>
+
+**GitLingo** 将日常在 GitHub 以及代码研发协作中高频用到的专业词汇，整理规划为 **16 个渐进式关卡单元**，涵盖从“基础登录注册”到“高级 Git 冲突与 CI/CD 配置”等共 **385 个核心词汇**、**48 个交互式练习** 以及 **16 个情景故事会话（Stories）**。
+
+依托浏览器原生 TTS 真人发音引擎，实现高频音效发音，让学习过程高效、立体、有趣！
 
 ---
 
 ## 🎨 界面预览 (Screenshots)
 
-### 🖥️ 桌面端 dashboard (三栏自适应布局)
+### 🖥️ 桌面端 Dashboard (三栏式自适应精美布局)
 ![Desktop Dashboard](./screenshots/desktop-dashboard.png)
 
 ### 📱 移动端学习地图 与 关卡节点
@@ -16,7 +29,7 @@
   <img src="./screenshots/mobile-map.png" width="350" alt="Mobile Map" />
 </p>
 
-### ✍️ 交互式多维题型 & 实时发音反馈
+### ✍️ 交互式多维题型 & 实时高频发音反馈
 ![Exercise View](./screenshots/exercise-view.png)
 ![Feedback View](./screenshots/feedback-view.png)
 
@@ -71,7 +84,8 @@
 
 ### 1. 克隆项目并安装依赖
 ```bash
-cd github-english
+git clone https://github.com/askofcc/gitlingo-tool.git
+cd gitlingo-tool
 npm install
 ```
 
@@ -79,7 +93,7 @@ npm install
 ```bash
 npm run dev
 ```
-打开浏览器访问控制台输出的地址即可本地练习。
+打开浏览器访问控制台输出的地址（默认 `http://localhost:5173/`）即可本地练习。
 
 ### 3. 构建静态产物
 ```bash
@@ -100,7 +114,7 @@ npx wrangler login
 ```
 
 ### 2. 直接部署发布 (Wrangler static assets 模式)
-在 `github-english` 目录下，直接运行以下命令：
+在项目根目录下，直接运行以下命令：
 ```bash
 # 首先确保完成了 vite 构建
 npm run build
