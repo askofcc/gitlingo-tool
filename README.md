@@ -89,43 +89,24 @@ cd gitlingo-tool
 npm install
 ```
 
-### 2. 启动本地开发服务
+### 2. 运行开发服务
 ```bash
 npm run dev
 ```
-打开浏览器访问控制台输出的地址（默认 `http://localhost:5173/`）即可本地练习。
-
-### 3. 构建静态产物
-```bash
-npm run build
-```
-打包好的文件会生成在 `dist` 目录中。
+打开浏览器访问 `http://localhost:5173/` 即可本地学习。
 
 ---
 
-## ☁️ 部署上线与认领 Cloudflare Pages/Workers
+## ☁️ 一键部署上线 (Cloudflare Workers)
 
-如果你想通过自己的 Cloudflare 账号上线此应用，可以按照以下步骤部署并在账号下领回控制权，以便绑定你的自定义域名：
+本项目已配置好 Wrangler，你可以极其简单地在 1 分钟内将其部署上线到你自己的 Cloudflare 账号：
 
-### 1. 登录 Cloudflare
-在终端执行以下命令，根据浏览器提示登录你的 Cloudflare 账户：
 ```bash
-npx wrangler login
-```
-
-### 2. 直接部署发布 (Wrangler static assets 模式)
-在项目根目录下，直接运行以下命令：
-```bash
-# 首先确保完成了 vite 构建
+# 1. 编译构建
 npm run build
 
-# 使用 wrangler 部署静态资源
+# 2. 一键发布
 npx wrangler deploy
 ```
-Wrangler 会自动上传 `dist` 目录下的所有文件。上传成功后，你会得到一个 Cloudflare 赠送的临时三级域名（例如：`https://gitlingo.xxxx.workers.dev`）。
 
-### 3. 认领与绑定自定义域名
-1. 登录 [Cloudflare 控制台 Web 界面](https://dash.cloudflare.com/)。
-2. 进入 **Workers & Pages** -> **Overview**，你将会看到刚刚通过终端部署的 `gitlingo` 项目。
-3. 点击进入项目，选择 **Settings** -> **Triggers**，在这里你可以轻松地添加你的 **Custom Domains (自定义域名)**。
-4. 绑定你的域名后，Cloudflare 会自动完成 SSL 证书签发并解析上线。
+发布完成后控制台会直接输出分配的免费三级域名（如 `https://gitlingo.xxxx.workers.dev`）。如需使用自定义域名，直接在 Cloudflare 网页端的 **Workers -> Trigger -> Custom Domains** 绑定你的域名即可。
